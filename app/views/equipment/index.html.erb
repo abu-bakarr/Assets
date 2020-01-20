@@ -41,8 +41,8 @@
                  <td><%= item.total %></td>
             <td><%= item.remarks %></td>
            <td> <%= link_to "Create Equiptment",  new_equipment_path %></td>
-             <td> <%= link_to "Edit Equiptment",  edit_equipment_path(@equiptments) %></td>
-                <td> <%= link_to "Delete Equiptment", equipment_path(@equiptments), method: :delete, data: {confirm:  "Are you sure ?"}%></td>
+             <td> <%= link_to "Edit Equiptment",  edit_equipment_path(item) %></td>
+                <td> <%= link_to "Delete Equiptment", equipment_path(item), method: :delete, data: {confirm:  "Are you sure ?"}%></td>
     </tr>
     <% end %>
    </tbody>
