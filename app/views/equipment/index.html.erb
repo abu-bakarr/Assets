@@ -1,0 +1,50 @@
+<div class= "container col s6 ">
+<h1> Equiptment List </h1>
+<table class="striped" id="table" >
+    <thead>
+        <tr>
+        <th>Description</th>
+        <th>Make Manu</th>
+        <th>Counrty from</th>
+        <th>Serial</th>
+        <th>Quantity</th>
+        <th>Acquisition date</th>
+        <th>Acquisition Cost</th>
+        <th>Estimated year</th>
+        <th> Year Commisioned</th>
+        <th>Operational</th>
+        <th>Out of Order</th>
+        <th>Operational Issue</th>
+        <th>Unverified</th>
+        <th>Department Location</th>
+        <th>Total</th>
+        <th>Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @equiptments.each do |item| %>
+       <tr>
+  <td><%= item.description %></td>
+  <td><%= item.make_manufacturer %></td>
+     <td><%= item.country_of_origin %></td>
+   <td><%= item.serial_number %></td>
+     <td><%= item.quantity %></td>
+      <td><%= item.acquisition_date %></td>
+      <td><%= item.acquisition_cost %></td>
+      <td><%= item.estimated_useful_years %></td>
+          <td><%= item.year_commissioned %></td>
+           <td><%= item.operational %></td>
+             <td><%= item.out_of_order %></td>
+              <td><%= item.operational_with_issues %></td>
+             <td><%= item.unverifiable %></td>
+                <td><%= item.department_location %></td>
+                 <td><%= item.total %></td>
+            <td><%= item.remarks %></td>
+           <td> <%= link_to "Create Equiptment",  new_equipment_path %></td>
+             <td> <%= link_to "Edit Equiptment",  edit_equipment_path(@equiptments) %></td>
+                <td> <%= link_to "Delete Equiptment", equipment_path(@equiptments), method: :delete, data: {confirm:  "Are you sure ?"}%></td>
+    </tr>
+    <% end %>
+   </tbody>
+</table>
+</div>

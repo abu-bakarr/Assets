@@ -1,0 +1,73 @@
+<div class= "container col s4 m4">
+<h1 class = "center" >Add New Hospital Util</h1>
+<%= form_for @equiptment do |f| %>
+<p>
+<%= f.label :Description %>
+<%= f.text_area :description %>
+</p>
+<p>
+<%= f.label :make_manufacturer %>
+<%= f.text_area :make_manufacturer %>
+</p>
+<p>
+<%= f.label :country_of_origin %>
+<%= f.text_area :country_of_origin %>
+</p>
+<p>
+<%= f.label :serial_number %>
+<%= f.text_area :serial_number %>
+</p>
+<p>
+<%= f.label :quantity %>
+<%= f.number_field :quantity %>
+</p>
+<p>
+<%= f.label :acquisition_date %>
+<%= f.date_field :acquisition_date %>
+</p>
+<p>
+<%= f.label :acquisition_cost %>
+<%= f.number_field :acquisition_cost %>
+</p>
+<p>
+<%= f.label :estimated_useful_years %>
+<%= f.date_field :estimated_useful_years %>
+</p>
+<p>
+<%= f.label :year_commissioned %>
+<%= f.number_field :year_commissioned %>
+</p>
+<p>
+<%= f.label :operational %>
+<%= f.text_area :operational %>
+</p>
+<p>
+<%= f.label :out_of_order %>
+<%= f.text_area :out_of_order %>
+</p>
+<p>
+<%= f.label :operational_with_issues %>
+<%= f.text_area :operational_with_issues %>
+</p>
+<p>
+<%= f.label :unverifiable %>
+<%= f.text_area :unverifiable %>
+</p>
+<p>
+<%= f.label :department_location %>
+<%= f.text_area :department_location %>
+</p>
+<p>
+<%= f.label :total %>
+<%= f.text_area :total %>
+</p>
+<p>
+<%= f.label :remarks %>
+<%= f.text_area :remarks %>
+</p>
+<p>
+<%= f.submit  :class => 'btn white-text z-depth-5'%>
+</p>
+<% end %>
+</div>
+
